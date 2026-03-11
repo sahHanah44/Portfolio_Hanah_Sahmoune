@@ -21,7 +21,7 @@ export const myProjects: Project[] = [
   {
     id: 2,
     title: "E-commerce Platform",
-    slug: "e-commerce-plateform",
+    slug: "e-commerce-platform",
     date: "2023-03-10",
     resource: ["sd"],
     description: "An e-commerce platform for small businesses to sell their products online.",

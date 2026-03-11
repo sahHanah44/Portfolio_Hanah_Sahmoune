@@ -3,6 +3,12 @@ import { myProjects } from "../../../data/project";
 import { notFound } from "next/navigation"; // Outil Next.js pour gérer les 404
 import Link from "next/link";
 
+// Générer les routes statiques pour les projets (Évite les rechargements de page)
+export async function generateStaticParams() {
+  return myProjects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
 // NOUVEAU NEXT 16 : On ajoute "async" et "Promise"
 export default async function ProjectDetails({ params }: { params: Promise<{ slug: string }> }) {
