@@ -35,20 +35,56 @@ export const myProjects: Project[] = [
       "/Echo/Architecture_pipelineDeux.png"
     ]
   },
-  {
-    id: 2,
-    title: "E-commerce Platform",
-    slug: "e-commerce-platform",
-    date: "2023-03-10",
-    resource: ["sd"],
-    description: "An e-commerce platform for small businesses to sell their products online.",
-    technologies: ["Node.js", "Express", "MongoDB"],
+ {
+    id: 4,
+    slug: "monitoring-hydrometrie-hubeau",
+    title: "EcoStream : Visualisation Hydrométrique en Temps Réel",
+    date: "33",
+    description: "Application web d'exploitation des données de l'API Hub'Eau pour le suivi des cours d'eau.",
+    technologies: ["Python (Flask)", "SQLite / MongoDB", "JavaScript (Leaflet.js)", "API Hub'Eau", "Git"],
+    context: "Ce projet, réalisé en équipe de 6, visait à concevoir un outil de monitoring des cours d'eau français en exploitant l'API Hub'Eau. L'objectif était de collecter des données massives (stations et mesures), de les stocker localement pour optimisation, et de les restituer via une interface interactive incluant une carte de France dynamique et des tableaux de bord analytiques.",
+    methodology: "Le projet a été piloté via la méthode Agile SCRUM, structurée par des sprints d'une semaine et des daily scrums pour fluidifier le travail d'équipe. En charge de la partie conception, j'ai réalisé la modélisation du schéma relationnel (Diagramme E.R) et la planification PERT pour sécuriser le rendu. J'ai également participé à la mise en place du pipeline ETL pour automatiser la récupération et l'insertion des données de l'API vers notre base de données locale.",
+    githubUrl: "LIEN_A_REMPLIR",
+    videoUrl: "LIEN_A_REMPLIR",
+    diagrams: [
+      "/Hubleau/DiagrammeER.png",
+      "/Hubleau/D_PERT.png",
 
-    // Voici comment tu rempliras tes vrais projets :
-    context: "Projet de fin d'année réalisé en équipe de 3 personnes. Mon rôle principal était de concevoir l'architecture de la base de données et de développer le frontend.",
-    methodology: "Nous avons utilisé la méthode Agile (Scrum) avec des sprints d'une semaine. Avant de coder, j'ai réalisé les diagrammes UML (Cas d'utilisation et Classes) ainsi qu'un diagramme PERT pour planifier nos tâches.",
-    githubUrl: "https://github.com/ton-pseudo/ton-repo",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Lien "Intégrer" de YouTube
-    diagrams: ["/diagramme-uml.jpg", "/diagramme-pert.png"] // Tes images devront être dans le dossier public/
+    ]
+  }, 
+  {
+    id: 3,
+    slug: "velib",
+    title: "Vélib : ",
+    date: "33",
+    description: "  ",
+    technologies: ["Python ", "SQLite ", "Git"],
+    context: " ",
+    methodology: "",
+    githubUrl: "LIEN_A_REMPLIR",
+    videoUrl: "LIEN_A_REMPLIR",
+    diagrams: [
+      "/Hubleau/DiagrammeER.png",
+      "/Hubleau/D_PERT.png",
+
+    ]
   },
+
+  {
+    id: 3,
+    slug: "infrastructure-services-reseau-debian",
+    title: "Déploiement d'une Infrastructure de Services Réseau",
+    description: "Conception et mise en place d'une architecture réseau sécurisée sous Debian (DHCP, SSH, Web, FTP).",
+    date:" ",
+    technologies: ["Debian (CLI)", "VirtualBox", "Apache2", "DHCP Server", "OpenSSH", "VSFTPD"],
+    context: "Ce projet consistait à mettre en place une maquette d'infrastructure réseau complète sous Linux Debian au sein d'une équipe de trois personnes. L'objectif était de configurer un serveur central distribuant des services critiques (DHCP, Web, FTP) à un parc de machines clientes, tout en garantissant un accès externe sécurisé via un bastion SSH.",
+    methodology: "La réussite du déploiement a reposé sur une gestion rigoureuse des configurations système et une documentation technique précise. J'ai utilisé une approche de planification par tâches pour isoler les services et tester l'interopérabilité à chaque étape. J'ai notamment piloté la sécurisation des accès via l'authentification par clé publique (SSH/SFTP) et la gestion fine des permissions (ACL) pour les serveurs de fichiers, assurant ainsi la conformité au cahier des charges de sécurité.",
+    githubUrl: "LIEN_A_REMPLIR",
+    videoUrl: "LIEN_A_REMPLIR",
+    diagrams: [
+      "/schema-topologie-reseau.png",
+      "/configuration-bastion-ssh.png",
+      "/planification-services.png"
+    ]
+  }
 ];
