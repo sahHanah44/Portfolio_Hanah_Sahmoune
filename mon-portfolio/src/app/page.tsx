@@ -1,5 +1,9 @@
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import Hero from "@/components/sections/Hero"
+import About from "@/components/sections/About"
+import Skill from "@/components/sections/Skill"
+import Contact from "@/components/sections/Contact"
+
 
 
 export default function Home() {
@@ -7,9 +11,12 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
       
       <Hero />     
+      <About />
+      <Skill />
       <ProjectsSection />
+
+      <Contact />
       
-      {/* Plus tard, tu ajouteras <Footer /> ici */}
     </main>
   );
 }
