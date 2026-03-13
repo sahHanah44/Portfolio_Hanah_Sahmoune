@@ -1,18 +1,42 @@
-import ProjectCard from "../ui/ProjectCard";
-import { myProjects } from "@/data/project";
+"use client";
+
+import Link from "next/link";
+import { myProjects } from "@/data/Project";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import styles from "./ProjectsSection.module.css";
 
 export default function ProjectsSection() {
+  const { ref, visible } = useScrollReveal();
+
   return (
-        <section id="projets" className="py-12 px-4 max-w-4xl mx-auto pt-20">
-        <h2 className="text-3xl font-extrabold mb-8 text-center">Mes Projets</h2>
-      
-      {/* La fameuse boucle .map() de React */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {myProjects.map((projetItem) => (
-          <ProjectCard 
-            key={projetItem.id} 
-            project={projetItem} // On passe toutes les infos du projet à notre carte !
-          />
+    <section
+      id="projets"
+      className={styles.section}
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <h2 className={`${styles.sectionTitle} ${visible ? styles.titleIn : ""}`}>
+        Mes Projets
+      </h2>
+
+      <div className={styles.grid}>
+        {myProjects.map((project, i) => (
+          <Link
+            href={`/projects/${project.slug}`}
+            key={project.id}
+            className={`${styles.card} ${visible ? styles.cardIn : ""}`}
+            style={{ transitionDelay: visible ? `${i * 130}ms` : "0ms" }}
+          >
+            <div className={styles.cardInner}>
+              <h3 className={styles.cardTitle}>{project.title}</h3>
+              <p className={styles.cardDescription}>{project.description}</p>
+              <ul className={styles.techList}>
+                {project.technologies.map((tech) => (
+                  <li key={tech} className={styles.techBadge}>{tech}</li>
+                ))}
+              </ul>
+            </div>
+            <span className={styles.cardArrow} aria-hidden="true">→</span>
+          </Link>
         ))}
       </div>
     </section>

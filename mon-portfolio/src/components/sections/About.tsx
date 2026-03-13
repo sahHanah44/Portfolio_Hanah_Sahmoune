@@ -1,50 +1,93 @@
+"use client";
+
+import { useScrollReveal } from "@/hooks/useScrollReveal"
+import styles from "./About.module.css";
+
+const interests = [
+  { emoji: "♟️", label: "Échecs" },
+  { emoji: "🎮", label: "Zelda" },
+  { emoji: "🎨", label: "Peinture" },
+  { emoji: "🏺", label: "Poterie" },
+  { emoji: "🧵", label: "Couture" },
+  { emoji: "🏛️", label: "Musées" },
+];
 
 export default function About() {
+  const { ref, visible } = useScrollReveal();
+
   return (
-    // L'id="about" est crucial pour que le lien de ta Navbar fonctionne !
-    <section id="about" className="py-20 px-4 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-extrabold text-gray-900 mb-10 text-center md:text-left">
+    <section
+      id="about"
+      className={styles.section}
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <h2 className={`${styles.title} ${visible ? styles.in : ""}`}>
         À propos de moi
       </h2>
 
-      <div className="flex flex-col md:flex-row gap-12 items-center">
-        
-        {/* Colonne Gauche : Le texte de présentation */}
-        <div className="flex-1 text-gray-600 text-lg leading-relaxed space-y-6">
-          <p>
-            Passionnée par le web et la création numérique, j'ai découvert le développement 
-            en concevant mes premiers projets. Depuis, je n'ai jamais cessé d'apprendre et 
-            de repousser mes limites techniques !
+      <div className={styles.content}>
+
+        {/* Colonne gauche */}
+        <div className={styles.textColumn}>
+          <blockquote className={`${styles.quote} ${visible ? styles.in : ""}`}>
+            Je suis développeuse en formation, avec un profil qui mêle{" "}
+            <strong>logique et créativité</strong>. Ce qui me plaît dans
+            l'informatique ? La liberté de construire quelque chose de concret
+            à partir de rien — une idée, quelques lignes de code, et ça prend vie.
+          </blockquote>
+
+          <p className={`${styles.paragraph} ${visible ? styles.in : ""}`} style={{ transitionDelay: "200ms" }}>
+            Mon approche mêle rigueur technique et sensibilité créative — un
+            héritage de mes spécialités au bac :{" "}
+            <strong className={styles.highlight}>
+              Mathématiques, Arts plastiques et Anglais
+            </strong>
+            . J'aime autant construire un pipeline de données propre que soigner
+            l'interface qui le met en valeur.
           </p>
-          <p>
-            Mon objectif ? Transformer des idées complexes en interfaces simples, modernes et 
-            performantes. J'aime particulièrement travailler avec l'écosystème JavaScript (React, Next.js) 
-            tout en gardant un œil attentif sur le design et l'expérience utilisateur (UX/UI).
-          </p>
-          <p>
-            Quand je ne suis pas derrière mon écran en train de coder, vous me trouverez probablement 
-            en train de [insérer ton hobby ici, ex: lire, faire du sport, tester des jeux vidéo...].
+
+          <p className={`${styles.paragraph} ${visible ? styles.in : ""}`} style={{ transitionDelay: "350ms" }}>
+            Actuellement en recherche de stage (20 avril – 12 juin), je vise des
+            environnements où je peux contribuer concrètement tout en progressant
+            vite. L'auto-formation fait partie de mon ADN depuis mon passage au{" "}
+            <strong className={styles.highlight}>CNED et à l'École 42</strong>.
           </p>
         </div>
 
-        {/* Colonne Droite : L'encart "En bref" */}
-        <div className="flex-1 w-full">
-          <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-bold text-blue-900 mb-6">En bref 🚀</h3>
-            <ul className="space-y-4 text-blue-800 font-medium">
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">📍</span> Basée en Île-de-France (Créteil / Paris)
+        {/* Colonne droite */}
+        <div className={styles.cardColumn}>
+          <div className={`${styles.infoCard} ${visible ? styles.in : ""}`} style={{ transitionDelay: "100ms" }}>
+            <h3 className={styles.cardLabel}>En bref</h3>
+            <ul className={styles.infoList}>
+              <li className={styles.infoItem}>
+                <span className={styles.infoKey}>Localisation</span>
+                <span className={styles.infoValue}>Nanterre · Île-de-France</span>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">🎓</span> Formation en Développement Web
+              <li className={styles.infoItem}>
+                <span className={styles.infoKey}>Formation</span>
+                <span className={styles.infoValue}>BUT Informatique, IUT de Vitry (UPEC)</span>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">💡</span> Curieuse et toujours en veille technique
+              <li className={styles.infoItem}>
+                <span className={styles.infoKey}>Disponibilité stage</span>
+                <span className={styles.infoValue}>20 avril – 12 juin 2026 · 8 semaines</span>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">☕</span> Carburant principal : le café (ou le thé !)
+              <li className={styles.infoItem}>
+                <span className={styles.infoKey}>Langues</span>
+                <span className={styles.infoValue}>Français natif · Anglais intermédiaire</span>
               </li>
             </ul>
+          </div>
+
+          <div className={`${styles.infoCard} ${visible ? styles.in : ""}`} style={{ transitionDelay: "250ms" }}>
+            <h3 className={styles.cardLabel}>Centres d'intérêt</h3>
+            <div className={styles.interestGrid}>
+              {interests.map(({ emoji, label }) => (
+                <span key={label} className={styles.interestItem}>
+                  <span className={styles.interestEmoji}>{emoji}</span>
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
