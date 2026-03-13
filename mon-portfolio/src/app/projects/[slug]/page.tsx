@@ -4,7 +4,7 @@ import { use, useState } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { myProjects } from "@/data/Project";
+import { myProjects } from "@/data/project";
 import styles from "./Page.module.css";
 
 interface PageProps {

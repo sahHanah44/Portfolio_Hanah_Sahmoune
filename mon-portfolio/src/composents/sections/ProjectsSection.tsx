@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { myProjects } from "@/data/Project";
+import { myProjects } from "@/data/project";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import styles from "./ProjectsSection.module.css";
 

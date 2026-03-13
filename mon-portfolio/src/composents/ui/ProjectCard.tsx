@@ -1,4 +1,4 @@
-import { Project } from "@/data/Project";
+import { Project } from "@/data/project";
 import Link from "next/link";
 
 export default function ProjectCard({ project }: { project: Project }) {

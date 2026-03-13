@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import ParticlesBackground from "@/components/ui/ParticulesBackground";
+import Navbar from "@/composents/layout/Navbar";
+import Footer from "@/composents/layout/Footer";
+import ParticlesBackground from "@/composents/ui/ParticulesBackground";
 
 export const metadata: Metadata = {
   title: "Hanah — Développeuse Web Junior",

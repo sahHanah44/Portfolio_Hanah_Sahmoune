@@ -16,6 +16,26 @@ export interface Project {
 }
 
 export const myProjects: Project[] = [
+  {
+  id: 6,
+  slug: "portfolio-personnel-nextjs",
+  date: "03/2026 – en cours",
+  title: "Portfolio Personnel — Hanah.dev",
+  description: "Portfolio évolutif conçu pour grandir avec ma carrière de développeuse.",
+  technologies: [
+    "Next.js 15 (App Router)",
+    "TypeScript",
+    "CSS Modules",
+    "Framer Motion",
+    "Vercel"
+  ],
+  context: "Ce projet est avant tout un projet personnel de long terme — mon portfolio professionnel, conçu dès le départ pour évoluer tout au long de ma carrière. L'objectif n'était pas seulement de créer une vitrine, mais de construire une base technique solide et maintenable que je peux enrichir au fil du temps : nouveaux projets, nouvelles compétences, nouvelles ambitions. J'en suis l'unique conceptrice, développeuse et chef de projet. J'ai pris toutes les décisions d'architecture, de design system et d'expérience utilisateur.",
+  methodology: "Dès la phase de conception, j'ai modélisé l'architecture complète via un diagramme UML de composants — représentant la hiérarchie entre le RootLayout Next.js, les composants UI (Navbar, Footer), les sections de la HomePage (Hero, About, ProjectsSection, Skills, Contact) et la page dynamique /projects/[slug] pilotée par une interface TypeScript Project. Cette modélisation m'a permis d'anticiper les dépendances entre composants et de structurer un routing App Router cohérent avant d'écrire la moindre ligne de code. J'ai appliqué une démarche itérative proche de l'Agile : chaque fonctionnalité (animations au scroll, particules, typewriter, galerie de diagrammes) a été développée et validée indépendamment, garantissant une base stable à chaque étape.",
+  githubUrl: "https://github.com/sahHanah44/Portfolio_Hanah_Sahmoune/tree/main",
+  diagrams: [
+    "/Portfolio/Arborescence_de_Composants.png"
+  ]
+},
   
   {
     id: 5,

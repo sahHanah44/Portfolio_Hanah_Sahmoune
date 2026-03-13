@@ -1,8 +1,8 @@
-import ProjectsSection from "@/components/sections/ProjectsSection";
-import Hero from "@/components/sections/Hero"
-import About from "@/components/sections/About"
-import Skill from "@/components/sections/Skill"
-import Contact from "@/components/sections/Contact"
+import ProjectsSection from "@/composents/sections/ProjectsSection";
+import Hero from "@/composents/sections/Hero"
+import About from "@/composents/sections/About"
+import Skill from "@/composents/sections/Skill"
+import Contact from "@/composents/sections/Contact"
 
 
 
