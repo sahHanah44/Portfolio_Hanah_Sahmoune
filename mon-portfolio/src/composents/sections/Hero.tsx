@@ -156,7 +156,7 @@ export default function Hero() {
         </h2>
 
         <p className={`${styles.description} ${showDesc ? styles.visible : ""}`}>
-          Je conçois des interfaces modernes et performantes — pipeline de données
+          COUCOU Je conçois des interfaces modernes et performantes — pipeline de données
           propre, interface qui le met en valeur. Curieuse, autonome, et toujours
           en veille technique.
         </p>
