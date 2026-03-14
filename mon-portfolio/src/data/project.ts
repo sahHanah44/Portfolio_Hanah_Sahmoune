@@ -51,7 +51,7 @@ export const myProjects: Project[] = [
     diagrams: [
       "/Echo/Diagramme_UML_Classe.drawio.png", 
       "/Echo/Diagramme_UML_sequence.png", 
-      "/Echo/SAE301D_PERT.png",
+      "/Echo/Diagramme_PERT.png",
       "/Echo/Architecture_pipeline.png",
       "/Echo/Architecture_pipelineDeux.png"
     ]
