@@ -65,7 +65,14 @@ export default function About() {
               </li>
               <li className={styles.infoItem}>
                 <span className={styles.infoKey}>Formation</span>
-                <span className={styles.infoValue}>BUT Informatique, IUT de Vitry (UPEC)</span>
+               <a 
+                  href="https://iut.u-pec.fr/formations/but-informatique-vitry" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={styles.infoValue}
+                >
+                  BUT Informatique, IUT de Créteil-Vitry (UPEC)
+                </a>
               </li>
               <li className={styles.infoItem}>
                 <span className={styles.infoKey}>Disponibilité stage</span>
