@@ -165,7 +165,7 @@ export default function Hero() {
           <Link href="#contact" className={styles.btnPrimary}>
             Me contacter
           </Link>
-          <a href="/CV_SAHMOUNE_Hanah.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+          <a href="/Hanah_Sahmoune_curriculum_vitae.pdf" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
             Télécharger mon CV
           </a>
         </div>
