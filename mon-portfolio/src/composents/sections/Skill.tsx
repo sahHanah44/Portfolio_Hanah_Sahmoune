@@ -6,17 +6,27 @@ import styles from "./Skill.module.css";
 
 const skillCategories = [
   {
-    title: "Frontend",
-    skills: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS", "Figma"],
+    title: "DÉVELOPPEMENT",
+    skills: ["Python", "PHP", "Java", "JavaScript", "C / C#", "Asp.Net", "API Rest"],
    
   },
   {
-    title: "Backend & BDD",
-    skills: ["PHP", "Node.js", "MySQL", "PostgreSQL", "API REST"],
+    title: "DONNÉES & BACKEND",
+    skills: [ "PL/SQL", "MySQL", "PostgreSQL", "MongoDB"],
   },
   {
-    title: "Outils & Méthodes",
-    skills: ["Git", "GitHub", "VS Code", "Agile", "UML", "PERT"],
+    title: "IA &  DATA",
+    skills: ["Mistral AI", "Prompt Engineering", "LLM"],
+
+  },
+  {
+    title: "OUTILS & DEVOPS",
+    skills: ["Git / GitLab", "Docker", "Bash", "VirtualBox", "Ubuntu", "CI/CD"],
+
+  },
+  {
+    title: "MÉTHODES",
+    skills: ["Agile / Scrum", "UML", "MVP", "Automatisation", "Audit"],
 
   },
 ];

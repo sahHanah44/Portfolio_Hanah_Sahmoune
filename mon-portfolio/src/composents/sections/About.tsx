@@ -75,8 +75,8 @@ export default function About() {
                 </a>
               </li>
               <li className={styles.infoItem}>
-                <span className={styles.infoKey}>Disponibilité stage</span>
-                <span className={styles.infoValue}>20 avril – 12 juin 2026 · 8 semaines</span>
+                <span className={styles.infoKey}>Disponibilité Alternance </span>
+                <span className={styles.infoValue}> 15 juin 2026 </span>
               </li>
               <li className={styles.infoItem}>
                 <span className={styles.infoKey}>Langues</span>

@@ -10,7 +10,7 @@ import styles from "./Hero.module.css";
 const ROLES = [
   "Développeuse Web Junior",
   "Étudiante BUT Informatique",
-  "Disponible · Stage 2026",
+  "Disponible · Alternance 2026",
 ];
 
 const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -143,7 +143,7 @@ export default function Hero() {
 
       {/* Colonne gauche */}
       <div className={styles.textContainer}>
-        <span className={styles.availTag}>Disponible · Stage 2026</span>
+        <span className={styles.availTag}>Disponible · Alternance 2026</span>
 
         <h1
           className={styles.title}
