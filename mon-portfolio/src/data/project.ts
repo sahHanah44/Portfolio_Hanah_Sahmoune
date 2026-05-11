@@ -17,6 +17,31 @@ export interface Project {
 
 export const myProjects: Project[] = [
   {
+  id: 7,
+  slug: "Cockpit-Jobboard",
+  date: "05/2026 – en cours",
+  title: "Cockpit de Recherche d'Alternance — 'Le Centaure'",
+  description: "Système semi-automatisé de recherche d'alternance : scraping multi-sources, filtrage IA, génération de lettres personnalisées et workflow de candidature en moins de 60 secondes.",
+  technologies: [
+    "Python",
+    "Streamlit",
+    "MongoDB",
+    "Google Gemini 2.5 Flash",
+    "REST API",
+    "BeautifulSoup",
+    "FPDF2",
+    "Pyperclip",
+    "Pandas",
+  ],
+  context: "Face à la compétitivité du marché de l'alternance, j'ai conçu et développé seule un outil complet pour automatiser ma propre recherche d'emploi.  L'idée centrale est celle du 'Centaure' : un système hybride où l'IA fait le travail intellectuel (analyse, rédaction, scoring) et l'humain garde le contrôle de l'envoi final. Le projet agrège des offres depuis plusieurs sources (La Bonne Alternance via API gouvernementale), les filtre selon mon profil CV réel, génère des lettres de motivation ultra-personnalisées via Gemini 2.5, et orchestre un workflow complet de candidature — de la découverte de l'offre à l'ouverture du formulaire en moins de 60 secondes. J'en suis l'unique conceptrice, développeuse et chef de projet.",
+  methodology: "J'ai adopté une architecture modulaire en 4 piliers indépendants : le Radar (scrapers), la Mémoire (MongoDB avec logique Upsert intelligente pour ne jamais écraser les statuts de candidature), le Cerveau (Gemini avec un Prompt System strict — blacklist de mots pour produire des lettres qualitative), et le Cockpit (dashboard Streamlit interactif). Le filtrage des offres repose sur une logique à 3 niveaux : élimination par mots interdits (CDI, stage, CFA...), validation par mots-clés CV (Python, React, SQL...), puis scoring de pertinence /100 basé sur les mots bonus. J'ai travaillé de manière itérative (Agile) : chaque module a été développé, testé et validé indépendamment avant intégration. Le projet intègre également un module 'Apporte ton offre' permettant de coller n'importe quelle URL (LinkedIn, Indeed) pour générer instantanément une lettre adaptée.",
+  githubUrl: "https://github.com/sahHanah44/Automatisation_jobBoard",
+  videoUrl: "https://www.youtube.com/embed/dgTpKXpZMws",
+  diagrams: [
+      "/cokpit/architecture_Cokpit.png"
+  ]
+},
+  {
   id: 6,
   slug: "portfolio-personnel-nextjs",
   date: "03/2026 – en cours",
