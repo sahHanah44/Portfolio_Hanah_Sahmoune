@@ -8,7 +8,7 @@ import styles from "./Hero.module.css";
 // ─── Données ──────────────────────────────────────────────────────────────────
 
 const ROLES = [
-  "Développeuse Web Junior",
+  "Développeuse Junior",
   "Étudiante BUT Informatique",
   "Disponible · Alternance 2026",
 ];

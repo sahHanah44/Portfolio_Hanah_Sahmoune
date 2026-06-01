@@ -7,7 +7,7 @@ import styles from "./Skill.module.css";
 const skillCategories = [
   {
     title: "DÉVELOPPEMENT",
-    skills: ["Python", "PHP", "Java", "JavaScript", "C / C#", "Asp.Net", "API Rest"],
+    skills: ["Python", "PHP", "Java", "JavaScript", "C / C#", "ReactJS" ,  "Asp.Net", "API Rest" ],
    
   },
   {
