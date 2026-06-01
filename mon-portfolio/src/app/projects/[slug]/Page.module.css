@@ -393,3 +393,12 @@
 .footerBack:hover {
   color: var(--accent);
 }
+
+.bodyText {
+  line-height: 1.7; /* Aère l'espace entre les lignes d'un même paragraphe */
+  margin-bottom: 1.2rem; /* Crée l'espace entre les différents paragraphes */
+  word-break: normal; /* Empêche les mots d'être coupés de manière aléatoire */
+  overflow-wrap: break-word; /* Coupe le mot uniquement s'il dépasse la largeur de l'écran (ex: une longue URL) */
+  hyphens: auto; /* Ajoute un vrai tiret de césure si un mot doit absolument être coupé en fin de ligne */
+  color: rgba(255, 255, 255, 0.85); /* Un blanc légèrement adouci fatigue moins les yeux qu'un blanc pur (à adapter selon ton thème) */
+}

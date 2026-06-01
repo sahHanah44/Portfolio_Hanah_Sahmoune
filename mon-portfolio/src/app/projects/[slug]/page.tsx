@@ -61,18 +61,27 @@ export default function ProjectPage({ params }: PageProps) {
               className={`${styles.btn} ${styles.btnGhost}`}
             >
               <PlayIcon />
-              Voir la démo
+           Voir la démo
             </a>
           )}
         </div>
-
+ 
         <h1 className={styles.heroTitle}>{project.title}</h1>
+        {project.category && (
+            <span className={styles.heroCategory}>{project.category}</span>
+          )}
+        {/* Affichage du rôle en tant que sous-titre */}
+        {project.role && (
+          <h2 className={styles.heroRole}>{project.role}</h2>
+        )}
+        
+        
         <p className={styles.heroDescription}>{project.description}</p>
 
         <ul className={styles.techList} aria-label="Technologies utilisées">
           {project.technologies.map((t) => (
             <li key={t} className={styles.techBadge}>{t}</li>
-          ))}
+        ))}
         </ul>
       </header>
 
@@ -82,21 +91,32 @@ export default function ProjectPage({ params }: PageProps) {
       {/* ── Body ── */}
       <div className={styles.bodyGrid}>
 
-        {/* Colonne gauche */}
-        <div className={styles.bodyLeft}>
-          {project.context && (
-            <Section label="Contexte & rôle" icon="◈" styles={styles}>
-              <p className={styles.bodyText}>{project.context}</p>
-            </Section>
-          )}
-          {project.methodology && (
-            <Section label="Méthodologie" icon="◎" styles={styles}>
-              <p className={styles.bodyText}>{project.methodology}</p>
-            </Section>
-          )}
-        </div>
+    {/* Colonne gauche : Le récit STAR */}
+            <div className={styles.bodyLeft}>
+              {project.context && (
+                <Section label="Contexte & Enjeux" icon="◈" styles={styles}>
+                  {project.context.split('\n').filter(p => p.trim() !== '').map((paragraph, index) => (
+                    <p key={index} className={styles.bodyText}>{paragraph}</p>
+                  ))}
+                </Section>
+              )}
+              {project.methodology && (
+                <Section label="Méthodologie & Actions" icon="◎" styles={styles}>
+                  {project.methodology.split('\n').filter(p => p.trim() !== '').map((paragraph, index) => (
+                    <p key={index} className={styles.bodyText}>{paragraph}</p>
+                  ))}
+                </Section>
+              )}
+              {project.results && (
+                <Section label="Résultats & Impact" icon="✦" styles={styles}>
+                  {project.results.split('\n').filter(p => p.trim() !== '').map((paragraph, index) => (
+                    <p key={index} className={styles.bodyText}>{paragraph}</p>
+                  ))}
+                </Section>
+              )}
+            </div>
 
-        {/* Colonne droite */}
+        {/* Colonne droite : Les médias */}
         <div className={styles.bodyRight}>
           {project.videoUrl && (
             <div className={styles.mediaBlock}>
@@ -148,8 +168,8 @@ function Section({
     </section>
   );
 }
+
 function VideoPlayer({ src, styles }: { src: string; styles: Record<string, string> }) {
-  // Petite astuce pour ajouter les options YouTube automatiquement à ton lien
   const autoPlayUrl = src.includes("?") 
     ? `${src}&autoplay=1&mute=1` 
     : `${src}?autoplay=1&mute=1`;
@@ -159,7 +179,6 @@ function VideoPlayer({ src, styles }: { src: string; styles: Record<string, stri
       <iframe
         src={autoPlayUrl}
         className={styles.videoPlayer}
-        // "autoplay" doit être autorisé ici aussi pour que le navigateur accepte
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Démonstration du projet"
@@ -179,8 +198,6 @@ function DiagramGallery({
 
   return (
     <div className={styles.gallery}>
-
-      {/* Image principale */}
       <div className={styles.galleryMain}>
         <Image
           src={diagrams[active]}
@@ -189,19 +206,14 @@ function DiagramGallery({
           className={styles.galleryImg}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-
-        {/* Titre du diagramme actif en bas à gauche */}
         <div className={styles.diagramTitle}>
           {pathToTitle(diagrams[active])}
         </div>
-
-        {/* Compteur en bas à droite */}
         <span className={styles.galleryCounter}>
           {active + 1} / {diagrams.length}
         </span>
       </div>
 
-      {/* Miniatures avec titre au survol */}
       {diagrams.length > 1 && (
         <div className={styles.galleryThumbs}>
           {diagrams.map((src, i) => (
@@ -219,7 +231,6 @@ function DiagramGallery({
                 className={styles.galleryThumbImg}
                 sizes="72px"
               />
-              {/* Label sous la miniature */}
               <span className={styles.thumbLabel}>
                 {pathToTitle(src)}
               </span>

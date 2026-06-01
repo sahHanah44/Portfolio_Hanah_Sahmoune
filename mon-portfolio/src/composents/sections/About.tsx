@@ -47,7 +47,7 @@ export default function About() {
           </p>
 
           <p className={`${styles.paragraph} ${visible ? styles.in : ""}`} style={{ transitionDelay: "350ms" }}>
-            Actuellement en recherche de stage (20 avril – 12 juin), je vise des
+            Actuellement en recherche d'un alternance ( septembre 2026), je vise des
             environnements où je peux contribuer concrètement tout en progressant
             vite. L'auto-formation fait partie de mon ADN depuis mon passage au{" "}
             <strong className={styles.highlight}>CNED et à l'École 42</strong>.
@@ -76,7 +76,7 @@ export default function About() {
               </li>
               <li className={styles.infoItem}>
                 <span className={styles.infoKey}>Disponibilité Alternance </span>
-                <span className={styles.infoValue}> 15 juin 2026 </span>
+                <span className={styles.infoValue}> Septembre 2026 </span>
               </li>
               <li className={styles.infoItem}>
                 <span className={styles.infoKey}>Langues</span>
