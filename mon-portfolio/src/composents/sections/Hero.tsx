@@ -143,7 +143,7 @@ export default function Hero() {
 
       {/* Colonne gauche */}
       <div className={styles.textContainer}>
-        <span className={styles.availTag}>Disponible · Alternance 2026</span>
+        <span className={styles.availTag}>Disponible · Alternance 2027</span>
 
         <h1
           className={styles.title}
